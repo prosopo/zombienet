@@ -7,7 +7,7 @@ updates:
     - 'automerge'
     schedule:
       interval: daily
-    open-pull-requests-limit: 4
+    open-pull-requests-limit: 0
 
   - package-ecosystem: npm
     directory: '/javascript/packages/cli'
@@ -18,7 +18,7 @@ updates:
     ignore:
     - dependency-name: "actions/upload-artifact"
       update-types: ["version-update:semver-major"]
-    open-pull-requests-limit: 4
+    open-pull-requests-limit: 0
 
   - package-ecosystem: npm
     directory: '/javascript/packages/orchestrator'
@@ -33,7 +33,7 @@ updates:
       update-types: ["version-update:semver-major"]
     - dependency-name: "actions/upload-artifact"
       update-types: ["version-update:semver-major"]
-    open-pull-requests-limit: 4
+    open-pull-requests-limit: 0
 
   - package-ecosystem: npm
     directory: '/javascript/packages/utils'
@@ -44,9 +44,10 @@ updates:
     ignore:
     - dependency-name: "actions/upload-artifact"
       update-types: ["version-update:semver-major"]
-    open-pull-requests-limit: 4
+    open-pull-requests-limit: 0
 
   - package-ecosystem: github-actions
+    open-pull-requests-limit: 0  # version updates off; security updates are unaffected
     directory: '/'
     labels:
     - 'automerge'
